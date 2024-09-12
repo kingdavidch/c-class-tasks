@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    long long number;
+    int count = 0;
+
+    printf("Enter a number (between 2 and 7 digits): ");
+    scanf("%lld", &number);
+
+    long long temp = number;
+    while (temp != 0) {
+        temp /= 10;
+        count++;
+    }
+
+    printf("Number of digits: %d\n", count);
+
+    if (count % 2 == 0) {
+        printf("The number of digits is even.\n");
+    } else {
+        printf("The number of digits is odd.\n");
+    }
+
+    return 0;
+}
